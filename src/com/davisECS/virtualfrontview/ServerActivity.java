@@ -34,7 +34,7 @@ public class ServerActivity extends Activity implements Session.Callback,
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_server);
-		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		//setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
 		mSurfaceView = (SurfaceView) findViewById(R.id.surface);
@@ -54,7 +54,10 @@ public class ServerActivity extends Activity implements Session.Callback,
 		String resolution = getIntent().getStringExtra(RESOLUTION);
 		int resX = 176;
 		int resY = 144;
-		if (resolution.equals("352x288")) {
+		if (resolution.equals("320x240")) {
+            resX = 320;
+            resY = 240;
+        } else if (resolution.equals("352x288")) {
 			resX = 352;
 			resY = 288;
 		} else if (resolution.equals("528x432")) {

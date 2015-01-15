@@ -17,6 +17,7 @@
         <item>100000</item>
         <item>250000</item>
         <item>500000</item>
+        <item>512000</item>
         <item>1000000</item>
         <item>1500000</item>
         <item>2000000</item>
@@ -26,6 +27,7 @@
 
     <string-array name="resolution_array">
         <item>176x144</item>
+        <item>320x240</item>
         <item>352x288</item>
         <item>528x432</item>
         <item>704x576</item>
